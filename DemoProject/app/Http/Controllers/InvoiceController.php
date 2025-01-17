@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Invoice;
 use Illuminate\Http\Request;
-
+use DB;
 class InvoiceController extends Controller
 {
     /**
@@ -12,7 +12,9 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        //
+        $data = DB::table('invoice')->get();
+        return view('list-invoice', compact('data'));
+
     }
 
     /**
@@ -20,7 +22,7 @@ class InvoiceController extends Controller
      */
     public function create()
     {
-        //
+        return "create";
     }
 
     /**
@@ -28,7 +30,7 @@ class InvoiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "store";
     }
 
     /**
@@ -36,7 +38,7 @@ class InvoiceController extends Controller
      */
     public function show(Invoice $invoice)
     {
-        //
+        return "show";
     }
 
     /**
@@ -44,7 +46,7 @@ class InvoiceController extends Controller
      */
     public function edit(Invoice $invoice)
     {
-        //
+        return "edit";
     }
 
     /**
@@ -52,7 +54,7 @@ class InvoiceController extends Controller
      */
     public function update(Request $request, Invoice $invoice)
     {
-        //
+        return "update";
     }
 
     /**
@@ -60,6 +62,6 @@ class InvoiceController extends Controller
      */
     public function destroy(Invoice $invoice)
     {
-        //
+        return "destroy";
     }
 }
