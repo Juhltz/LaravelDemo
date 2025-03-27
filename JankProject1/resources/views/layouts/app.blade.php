@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'My Laravel Site')</title>
+    <title>@yield('title', 'Öch Farm')</title>
     <script type="module" src="{{ asset('js/app.js') }}"></script>
 
     <!-- jQuery -->
@@ -17,18 +17,20 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-<header>
-    <a class="title" href="{{ url('/') }}">
-        <h1>My Laravel Site</h1>
-        <img src="{{ asset('img/logo.png') }}" alt="Site Logo" height="100" width="100">
-    </a>
+<header class="position-relative">
+    <div class="banner position-relative text-white text-center d-flex align-items-center justify-content-center" style="background: url('{{ asset('img/banner.jpg') }}') center/cover no-repeat; height: 300px;">
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+        <div class="position-relative d-flex align-items-center justify-content-center w-100">
+            <img src="{{ asset('img/elch.jpeg') }}" alt="Site Logo" class="rounded-circle shadow-lg me-3" height="100" width="100">
+            <h1 class="fw-bold m-0">Welcome to Öch Farm</h1>
+            <img src="{{ asset('img/elch.jpeg') }}" alt="Site Logo" class="rounded-circle shadow-lg ms-3" height="100" width="100">
+        </div>
+    </div>
 </header>
 
 <div class="content">
     @yield('content')
 </div>
-
-
 
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>

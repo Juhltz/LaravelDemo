@@ -5,8 +5,8 @@
 @section('content')
 
     <div class="container mb-5 mt-5">
-       <h2>Invoices</h2>
-       <a href="{{ route('invoice.create') }}" class="btn btn-primary">Create New Invoice</a>
+       <h2>Rechnung</h2>
+       <a href="{{ route('invoice.create') }}" class="btn btn-primary">Neue Rechnung erstellen</a>
 
        @if(session('success'))
            <p style="color: green;">{{ session('success') }}</p>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="container mt-5">
-        <h3>Really Fancy Datatable oooooo</h3>
+        <h3>Rechnungen die noch nicht gefressen wurden!</h3>
         <table class="table table-bordered" id="laravel_datatable">
             <thead>
             <tr>
